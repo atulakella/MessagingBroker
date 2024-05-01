@@ -9,7 +9,7 @@ connection = pika.BlockingConnection(connection_parameters)
 
 channel = connection.channel()
 
-channel.queue_declare(queue='object_counts')
+channel.queue_declare(queue='detections')
 
 channel.basic_consume(queue='object_counts', auto_ack=True,
     on_message_callback=on_message_received)
