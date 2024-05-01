@@ -6,7 +6,7 @@ connection = pika.BlockingConnection(connection_parameters)
 
 channel = connection.channel()
 
-channel.queue_declare(queue='letterbox')
+channel.queue_declare(queue='detections')
 
 message = "Another one, This one is without consumer runnnig."
 
